@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left2Go - Rescue Surplus Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: #fff; color: #333; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1em 2em; background-color:#C43131; }
+    .logo { display:flex; align-items:center; }
+    .logo img { height:40px; margin-right:0.5em; }
+    nav a { color:#fff; margin-left:1em; text-decoration:none; font-weight:600; font-size:0.95em; }
+    .hero { position:relative; background:url(https://asianinspirations.com.au/wp-content/uploads/2023/08/The-Fascinating-History-of-Australian-Chinese-Cuisine_04-More-Chinese-Flavours.jpg) center/cover no-repeat; height:350px; display:flex; align-items:center; justify-content:center; }
+    .hero::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    .hero h2 { position:relative; color:#fff; font-size:2.2em; background:rgba(0,0,0,0.6); padding:0.5em 1em; border-radius:8px; }
+    .section { padding:2em; text-align:center; }
+    .section h3 { font-size:1.8em; margin-bottom:1em; color:#C43131; }
+    .carousel { position:relative; width:90%; margin:0 auto; overflow:hidden; }
+    .carousel-track { display:flex; transition:transform 0.5s ease; }
+    .card { min-width:260px; margin-right:1em; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); overflow:hidden; flex-shrink:0; }
+    .card img { width:100%; height:120px; object-fit:cover; }
+    .card-body { padding:1em; text-align:left; }
+    .card-body h4 { margin-bottom:0.3em; color:#C43131; font-size:1.1em; }
+    .card-body p { font-size:0.9em; color:#555; margin:0.2em 0; }
+    .card-body button { margin-top:0.5em; background-color:#C43131; color:#fff; border:none; padding:0.5em 1em; border-radius:6px; cursor:pointer; font-size:0.9em; }
+    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:#fff; font-size:2em; padding:0.2em 0.6em; cursor:pointer; z-index:2; }
+    .carousel-btn.prev { left:10px; }
+    .carousel-btn.next { right:10px; }
+    .cta-section { position:relative; background:url(https://giffiles.alphacoders.com/820/820.gif) center/cover no-repeat; padding:3em 1em; text-align:center; color:#fff; }
+    .cta-section::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+    .cta-content { position:relative; z-index:1; display:inline-block; background:rgba(0,0,0,0.6); padding:1.5em 2em; border-radius:8px; }
+    .cta-content h2 { color:#FFCC00; margin-bottom:0.5em; }
+    .cta-content p { font-size:1em; margin-bottom:1em; }
+    .cta-content button { background:#FFCC00; border:none; padding:0.6em 1.2em; font-size:1em; border-radius:6px; cursor:pointer; color:#333; }
+    footer { background:#f4f4f4; padding:2em; text-align:center; font-size:0.9em; color:#555; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="https://i.postimg.cc/HxgT9Nzj/20250510011513.png"><h1>Left2Go</h1></div>
+    <nav><a href="#">Home</a><a href="#">How It Works</a><a href="#">Partners</a><a href="#">Login</a></nav>
+  </header>
+
+  <div class="hero"><h2>Save Great Food. Help the Planet.</h2></div>
+
+  <section class="section">
+    <h3>Available Surplus Chinese Meals</h3>
+    <div class="carousel">
+      <button class="carousel-btn prev">❮</button>
+      <ul class="carousel-track">
+        <li class="card"><img src="https://th.bing.com/th/id/OIP.qu7XYOGT42pHeMBhzFVDVgHaFF?w=269&h=185&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Chinese Feast"><div class="card-body"><h4>Chinese Feast</h4><p>From: Festive Table</p><p>Now: $7.99</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://img.freepik.com/premium-photo/set-assorted-chinese-food-table-with-male-hand-holding-chopsticks-from-full-festive-table-with-all-traditional-chinese-dishes-asian-style-dinner-buffet-top-view_92134-457.jpg?w=2000" alt="Assorted Chinese Dishes"><div class="card-body"><h4>Assorted Dishes</h4><p>From: Buffet Style</p><p>Now: $8.99</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://cdn.eathappyproject.com/wp-content/uploads/2021/10/Chinese-Cuisine.jpg" alt="Chinese Cuisine"><div class="card-body"><h4>Chinese Cuisine</h4><p>From: Happy Project</p><p>Now: $6.50</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://www.usmaniachinese.com/wp-content/uploads/2020/01/Mama_Chang_Signature_Dishes.6-1024x768.jpg" alt="Signature Dishes"><div class="card-body"><h4>Signature Dishes</h4><p>From: Mama Chang</p><p>Now: $9.99</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://www.maangchi.com/wp-content/uploads/2019/09/mapotofu.jpg" alt="Traditional Meal"><div class="card-body"><h4>Traditional Meal</h4><p>From: Suite Life</p><p>Now: $7.50</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://www.expatsholidays.com/wp-content/uploads/2021/03/chinese-food.jpeg" alt="Chinese Food Plate"><div class="card-body"><h4>Chinese Food Plate</h4><p>From: Expat Holidays</p><p>Now: $5.75</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://images.chinahighlights.com/allpicture/2019/11/a47d9323b7ae409ba96e628d_894x596.jpg" alt="Festive Spread"><div class="card-body"><h4>Festive Spread</h4><p>From: China Highlights</p><p>Now: $8.49</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://images.slurrp.com/prod/articles/q4d47ebp3sb.webp" alt="Gourmet Plate"><div class="card-body"><h4>Gourmet Plate</h4><p>From: Slurrp</p><p>Now: $9.25</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://www.epicureantravelerblog.com/wp-content/uploads/2017/05/sweetsourpork-1024x616.jpg" alt="Sweet Sour Pork"><div class="card-body"><h4>Sweet Sour Pork</h4><p>From: Epicurean Traveler</p><p>Now: $6.25</p><button>Reserve</button></div></li>
+        <li class="card"><img src="https://get.pxhere.com/photo/restaurant-dish-meal-food-cooking-asia-gourmet-meat-cuisine-noodle-asian-food-catering-chinese-food-southeast-asian-food-bulgogi-chaoshan-casserole-soup-beef-rice-paper-1165715.jpg" alt="Beef Noodle Soup"><div class="card-body"><h4>Beef Noodle Soup</h4><p>From: PXHere Favorites</p><p>Now: $5.99</p><button>Reserve</button></div></li>
+      </ul>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content"><h2>Join the Movement</h2><p>Every meal you rescue means less waste and more impact. Let's eat smarter together.</p><button>Get Started</button></div>
+  </section>
+
+  <footer><p>&copy; 2025 Left2Go. All rights reserved.</p></footer>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length-1].cloneNode(true);
+    firstClone.id = 'first-clone'; lastClone.id = 'last-clone';
+    track.append(firstClone);
+    track.prepend(lastClone);
+    const slideWidth = slides[0].getBoundingClientRect().width + 16;
+    let index = 1;
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+    document.querySelector('.next').addEventListener('click', ()=>{
+      if(index >= track.children.length-1) return;
+      index++;
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    });
+    document.querySelector('.prev').addEventListener('click', ()=>{
+      if(index <= 0) return;
+      index--;
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    });
+    track.addEventListener('transitionend', ()=>{
+      if(track.children[index].id === firstClone.id){ track.style.transition = 'none'; index = 1; track.style.transform = `translateX(-${slideWidth * index}px)`; }
+      if(track.children[index].id === lastClone.id){ track.style.transition = 'none'; index = track.children.length-2; track.style.transform = `translateX(-${slideWidth * index}px)`; }
+    });
+  </script>
+</body>
+</html>
